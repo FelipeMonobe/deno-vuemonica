@@ -5,12 +5,6 @@ const titulo = ref("Título");
 </script>
 
 <template>
-<h1 class="h1green">{{ titulo }}</h1>
-<input type="text" v-model="titulo" />
+<h1>{{ titulo }}</h1>
+<input v-model="titulo" type="text" class="form-control" />
 </template>
-
-<style scoped>
-.h1green {
-  color: red;
-}
-</style>
