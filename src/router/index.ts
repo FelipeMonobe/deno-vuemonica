@@ -5,8 +5,8 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "transposer",
-      component: () => import("@/views/Transposer.vue"),
+      name: "harmonica",
+      component: () => import("@/views/Harmonica.vue"),
     },
   ],
 });
