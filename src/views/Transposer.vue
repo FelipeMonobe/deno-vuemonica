@@ -14,7 +14,12 @@ const state = reactive({
 //#endregion
 
 //#region COMPUTED
-const dynamicTxtareaRows = computed(() => (state.errorMsg ? 5 : 11));
+const dynamicTxtareaRows = computed(() => {
+  let maxRows = 11;
+  if (state.errorMsg) maxRows -= 3;
+  if (state.resultsCopied) maxRows -= 2;
+  return maxRows;
+});
 //#endregion
 
 //#region METHODS
@@ -36,6 +41,8 @@ const onResetClick = (): void => {
   state.result = "";
   state.pitch = -1;
   state.showResults = false;
+  state.resultsCopied = false;
+  state.errorMsg = "";
 };
 
 const onResultsClick = (e: Event): void => {
