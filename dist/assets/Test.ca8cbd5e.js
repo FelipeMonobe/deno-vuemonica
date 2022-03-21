@@ -1,1 +1,0 @@
-import{d as o,k as s,o as n,c as r,a,t as u,l as p,v as c,F as i}from"./vendor.66af4cf1.js";const v=o({setup(m){const e=s("T\xEDtulo");return(d,t)=>(n(),r(i,null,[a("h1",null,u(e.value),1),p(a("input",{"onUpdate:modelValue":t[0]||(t[0]=l=>e.value=l),type:"text",class:"form-control"},null,512),[[c,e.value]])],64))}});export{v as default};
