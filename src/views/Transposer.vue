@@ -74,8 +74,9 @@ const onCloseClick = (): void => {
         <textarea
           v-model="state.tablature"
           v-show="!state.showResults"
-          class="form-control"
           :rows="dynamicTxtareaRows"
+          class="form-control"
+          placeholder="Tablature in +4 (blow), -4' (draw half bend), -3'' (draw full bend), -4 (draw), +4# (overblow) notation"
         />
       </div>
       <div>
@@ -83,8 +84,8 @@ const onCloseClick = (): void => {
           v-model="state.result"
           v-show="state.showResults"
           @click="onResultsClick"
-          class="form-control"
           :rows="dynamicTxtareaRows"
+          class="form-control"
           readonly
         />
         <p v-if="state.resultsCopied" class="mt-2 text-success fw-bold fs-6">
